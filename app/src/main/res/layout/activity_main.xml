@@ -39,17 +39,22 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="291dp"
-        android:layout_height="264dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="216dp">
+        android:layout_width="329dp"
+        android:layout_height="139dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.349">
 
     </FrameLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="410dp"
-        android:layout_height="49dp"
+        android:layout_width="411dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#000000"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,10 +64,12 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageButton
-                android:id="@+id/Home"
+            android:id="@+id/Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#000000"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/home" />
 
         <ImageButton
@@ -70,6 +77,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#000000"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/user" />
 
         <ImageButton
@@ -77,6 +86,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#000000"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/store" />
 
         <ImageButton
@@ -84,6 +95,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#000000"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/more" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
