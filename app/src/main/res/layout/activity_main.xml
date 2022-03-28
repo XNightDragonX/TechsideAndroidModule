@@ -22,9 +22,11 @@
             android:iconifiedByDefault="false">
 
             <requestFocus />
+
         </SearchView>
 
         <ListView
+            android:visibility="gone"
             android:id="@+id/listprod"
             android:layout_width="match_parent"
             android:layout_height="125dp"
@@ -33,7 +35,8 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0">
+        </ListView>
 
     </LinearLayout>
 
@@ -57,7 +60,8 @@
             android:layout_weight="1"
             android:backgroundTint="#000000"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/home" />
+            app:srcCompat="@drawable/home"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/User"
@@ -66,7 +70,8 @@
             android:layout_weight="1"
             android:backgroundTint="#000000"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/user" />
+            app:srcCompat="@drawable/user"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/Store"
@@ -78,7 +83,7 @@
             app:srcCompat="@drawable/store" />
 
         <ImageButton
-            android:id="@+id/More"
+            android:id="@+id/Store"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -89,16 +94,14 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="413dp"
-        android:layout_height="390dp"
+        android:layout_width="407dp"
+        android:layout_height="421dp"
         android:layout_marginBottom="8dp"
         android:gravity="center_vertical"
         app:layout_constraintBottom_toTopOf="@+id/buttons"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -111,32 +114,32 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView8"
+                <ImageButton
+                    android:id="@+id/ButtonProd1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/Precio1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Precio" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/Nombre1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Nombre" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/MarcaModelo1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Marca/Modelo" />
             </LinearLayout>
 
             <LinearLayout
@@ -145,38 +148,38 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView9"
+                <ImageButton
+                    android:id="@+id/ButtonProd2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/Precio2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Precio" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/Nombre2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Nombre" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/MarcaModelo2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Marca/Modelo" />
             </LinearLayout>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="205dp"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
             <LinearLayout
@@ -185,32 +188,32 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView7"
+                <ImageButton
+                    android:id="@+id/ButtonProd3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/Precio3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Precio" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/Nombre3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Nombre" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/MarcaModelo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Marca/Modelo" />
             </LinearLayout>
 
             <LinearLayout
@@ -219,55 +222,35 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView10"
+                <ImageButton
+                    android:id="@+id/ButtonProd4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/Precio4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Precio" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/Nombre4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Nombre" />
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/MarcaModelo4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="TextView" />
+                    android:text="Marca/Modelo" />
             </LinearLayout>
         </TableRow>
 
     </TableLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="412dp"
-        android:layout_height="90dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
