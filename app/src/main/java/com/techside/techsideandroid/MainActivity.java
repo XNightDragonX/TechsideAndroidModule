@@ -8,6 +8,7 @@ import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
+    // Programacion de el buscador
     ListView listprod;
     ListViewAdapter adapter;
     SearchView editsearch;
