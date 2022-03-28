@@ -26,16 +26,15 @@
 
         <ListView
             android:id="@+id/listprod"
-            android:layout_width="410dp"
-            android:layout_height="123dp"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintVertical_bias="0.0" />
 
-        </ListView>
     </LinearLayout>
 
     <LinearLayout
@@ -89,19 +88,21 @@
     </LinearLayout>
 
     <TableLayout
-        android:layout_width="381dp"
+        android:id="@+id/tableLayout"
+        android:layout_width="413dp"
         android:layout_height="390dp"
-        android:layout_grav
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center_vertical"
         app:layout_constraintBottom_toTopOf="@+id/buttons"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="1.0">
 
         <TableRow
-            android:layout_width="351dp"
-            android:layout_height="116dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
             <LinearLayout
@@ -175,7 +176,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="142dp"
+            android:layout_height="205dp"
             android:gravity="center_horizontal">
 
             <LinearLayout
@@ -248,5 +249,25 @@
         </TableRow>
 
     </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="412dp"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
