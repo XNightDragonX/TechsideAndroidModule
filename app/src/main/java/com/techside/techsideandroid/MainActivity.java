@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     ListViewAdapter adapter;
     SearchView editsearch;
     String[] productnamelist;
-    ArrayList<Productnames> arraylistprod = new ArrayList<Productnames>();
+    ArrayList<productnames> arraylistprod = new ArrayList<productnames>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,22 +24,22 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         productnamelist = new String[]{"cloro", ""/*,"insetar mas productos"*/};
 
         // Encuentra en el xml buscador
-        list = (ListView) findViewById(R.id.buscador);
+        listprod = (ListView) findViewById(R.id.listprod);
 
         for (int i = 0; i < productnamelist.length; i++) {
-            Productnames ProductNames = new Productnames(productnamelist[i]);
-            // Ingresa todos los datos en la lista
+            productnames ProductNames = new productnames(productnamelist[i]);
+            // Ingresa todos los datos en la arraylist
             arraylistprod.add(ProductNames);
         }
 
         // Pasa los resultados al adapter
-        adapter = new ListViewAdapter(this, arraylistprod);
+        adapter = new ListViewAdapter(this, productnamelist);
 
         // Pasa el adapter a la lista
-        list.setAdapter(adapter);
+        listprod.setAdapter(adapter);
 
-        // encuentra el buscador y ingresa datos
-        editsearch = (SearchView) findViewById(R.id.buscador);
+        // encuentra el buscador en el xml y ingresa datos
+        editsearch = (SearchView) findViewById(R.id.search);
         editsearch.setOnQueryTextListener(this);
     }
 
@@ -53,6 +53,16 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         String text = newText;
         adapter.filter(text);
         return false;
+    }
+
+    private class productnames {
+        public productnames(String s) {
+        }
+    }
+
+    private class ArrayList<T> {
+        public void add(T productNames) {
+        }
     }
 }
 
