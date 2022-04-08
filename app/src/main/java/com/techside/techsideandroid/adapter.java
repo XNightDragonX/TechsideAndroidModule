@@ -1,6 +1,7 @@
 package com.techside.techsideandroid;
 
 import android.content.Context;
+import android.database.DataSetObserver;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,17 +12,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public abstract class ListViewAdapter implements ListAdapter {
+public class ListViewAdapter implements ListAdapter {
     Context mContext;
     LayoutInflater inflater;
-    private List<Productnames> productnamelist = null;
-    private ArrayList<Productnames> arraylist;
+    private List<productnames> productnamelist = null;
+    private ArrayList<productnames> arraylist;
 
-    public ListViewAdapter(Context context, String[] productNameList) {
+    public ListViewAdapter(Context context, String[] productnameList) {
         mContext = context;
-        this.ProductNameList = ProductNameList;
+        this.productnamelist = productnamelist;
         inflater = LayoutInflater.from(mContext);
-        this.arraylist = new ArrayList<ProductNames>();
-        this.arraylist.addAll(ProductNamesList);
+        this.arraylist = new ArrayList<productnames>();
+        this.arraylist.addAll(productnamelist);
     }
 }
